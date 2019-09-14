@@ -9,7 +9,6 @@
 import Foundation
 
 extension URLRequest {
-    
     init(service: RequestProtocol) {
         let components = URLComponents(service: service)
         guard let url = components.url else { preconditionFailure("Failed to construct URL") }

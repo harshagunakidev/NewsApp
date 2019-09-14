@@ -8,6 +8,4 @@
 
 import Foundation
 
-struct NewsApi {
-    static let key = "ae590003114c478eae7628d9360e6d61"
-}
+struct NewsApi { static let key = "ae590003114c478eae7628d9360e6d61" }

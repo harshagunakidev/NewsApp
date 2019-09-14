@@ -28,6 +28,19 @@
 		9081DA50232D4325003679DF /* URLComponents+RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA4F232D4325003679DF /* URLComponents+RequestProtocol.swift */; };
 		9081DA52232D436A003679DF /* PagingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA51232D436A003679DF /* PagingModel.swift */; };
 		9081DA54232D4E71003679DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA53232D4E71003679DF /* Constants.swift */; };
+		9081DA57232D5053003679DF /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA56232D5053003679DF /* NewsListViewController.swift */; };
+		9081DA59232D50A4003679DF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA58232D50A4003679DF /* Coordinator.swift */; };
+		9081DA5C232D510D003679DF /* NewsMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA5B232D510D003679DF /* NewsMainCoordinator.swift */; };
+		9081DA5E232D5178003679DF /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA5D232D5178003679DF /* AppStoryboard.swift */; };
+		9081DA60232D531D003679DF /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA5F232D531D003679DF /* NewsDetailViewController.swift */; };
+		9081DA62232D534F003679DF /* NewsDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA61232D534F003679DF /* NewsDetailCoordinator.swift */; };
+		9081DA64232D543E003679DF /* UISceneDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA63232D543E003679DF /* UISceneDelegate+Extension.swift */; };
+		9081DA66232D5C27003679DF /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA65232D5C27003679DF /* UIViewController+Extension.swift */; };
+		9081DA6D232D5F88003679DF /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA6C232D5F88003679DF /* UIFont+Extension.swift */; };
+		9081DA6E232D65CF003679DF /* robotoslab-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9081DA69232D5E61003679DF /* robotoslab-regular.ttf */; };
+		9081DA6F232D65D3003679DF /* robotoslab-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9081DA6B232D5E61003679DF /* robotoslab-light.ttf */; };
+		9081DA70232D65D6003679DF /* robotoslab-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9081DA6A232D5E61003679DF /* robotoslab-thin.ttf */; };
+		9081DA71232D65D9003679DF /* robotoslab-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9081DA68232D5E1C003679DF /* robotoslab-bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +88,19 @@
 		9081DA4F232D4325003679DF /* URLComponents+RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+RequestProtocol.swift"; sourceTree = "<group>"; };
 		9081DA51232D436A003679DF /* PagingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingModel.swift; sourceTree = "<group>"; };
 		9081DA53232D4E71003679DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9081DA56232D5053003679DF /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		9081DA58232D50A4003679DF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9081DA5B232D510D003679DF /* NewsMainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsMainCoordinator.swift; sourceTree = "<group>"; };
+		9081DA5D232D5178003679DF /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		9081DA5F232D531D003679DF /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		9081DA61232D534F003679DF /* NewsDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailCoordinator.swift; sourceTree = "<group>"; };
+		9081DA63232D543E003679DF /* UISceneDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISceneDelegate+Extension.swift"; sourceTree = "<group>"; };
+		9081DA65232D5C27003679DF /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		9081DA68232D5E1C003679DF /* robotoslab-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "robotoslab-bold.ttf"; sourceTree = "<group>"; };
+		9081DA69232D5E61003679DF /* robotoslab-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "robotoslab-regular.ttf"; sourceTree = "<group>"; };
+		9081DA6A232D5E61003679DF /* robotoslab-thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "robotoslab-thin.ttf"; sourceTree = "<group>"; };
+		9081DA6B232D5E61003679DF /* robotoslab-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "robotoslab-light.ttf"; sourceTree = "<group>"; };
+		9081DA6C232D5F88003679DF /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +151,7 @@
 		9081D9FA232C1497003679DF /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				9081DA55232D4FD4003679DF /* Resources */,
 				9081DA36232CAFD9003679DF /* Network */,
 				9081DA33232CA7C7003679DF /* AppDelegate */,
 				9081DA32232CA7AA003679DF /* ViewModel */,
@@ -133,8 +160,6 @@
 				9081DA31232CA780003679DF /* ViewController */,
 				9081DA2B232CA6A7003679DF /* Coordinator */,
 				9081DA2C232CA6B4003679DF /* Model */,
-				9081DA04232C149D003679DF /* Assets.xcassets */,
-				9081DA09232C149D003679DF /* Info.plist */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -160,6 +185,7 @@
 		9081DA2B232CA6A7003679DF /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				9081DA5A232D50F1003679DF /* News */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -188,6 +214,7 @@
 				9081DA4C232D4247003679DF /* Extensions */,
 				9081DA45232D3BC5003679DF /* Protocols */,
 				9081DA53232D4E71003679DF /* Constants.swift */,
+				9081DA5D232D5178003679DF /* AppStoryboard.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -232,6 +259,8 @@
 		9081DA39232D342B003679DF /* News */ = {
 			isa = PBXGroup;
 			children = (
+				9081DA56232D5053003679DF /* NewsListViewController.swift */,
+				9081DA5F232D531D003679DF /* NewsDetailViewController.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -250,6 +279,7 @@
 				9081DA46232D3BE4003679DF /* RequestProtocol.swift */,
 				9081DA48232D3C02003679DF /* URLSessionProtocol.swift */,
 				9081DA4A232D3C1C003679DF /* RequestProviderProtocol.swift */,
+				9081DA58232D50A4003679DF /* Coordinator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -259,8 +289,41 @@
 			children = (
 				9081DA4D232D42E4003679DF /* URLRequest+RequestProtocol.swift */,
 				9081DA4F232D4325003679DF /* URLComponents+RequestProtocol.swift */,
+				9081DA63232D543E003679DF /* UISceneDelegate+Extension.swift */,
+				9081DA65232D5C27003679DF /* UIViewController+Extension.swift */,
+				9081DA6C232D5F88003679DF /* UIFont+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9081DA55232D4FD4003679DF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9081DA67232D5DF6003679DF /* UIFont */,
+				9081DA04232C149D003679DF /* Assets.xcassets */,
+				9081DA09232C149D003679DF /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9081DA5A232D50F1003679DF /* News */ = {
+			isa = PBXGroup;
+			children = (
+				9081DA5B232D510D003679DF /* NewsMainCoordinator.swift */,
+				9081DA61232D534F003679DF /* NewsDetailCoordinator.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		9081DA67232D5DF6003679DF /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				9081DA6B232D5E61003679DF /* robotoslab-light.ttf */,
+				9081DA69232D5E61003679DF /* robotoslab-regular.ttf */,
+				9081DA6A232D5E61003679DF /* robotoslab-thin.ttf */,
+				9081DA68232D5E1C003679DF /* robotoslab-bold.ttf */,
+			);
+			path = UIFont;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +430,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9081DA71232D65D9003679DF /* robotoslab-bold.ttf in Resources */,
+				9081DA6E232D65CF003679DF /* robotoslab-regular.ttf in Resources */,
+				9081DA6F232D65D3003679DF /* robotoslab-light.ttf in Resources */,
+				9081DA70232D65D6003679DF /* robotoslab-thin.ttf in Resources */,
 				9081DA08232C149D003679DF /* LaunchScreen.storyboard in Resources */,
 				9081DA05232C149D003679DF /* Assets.xcassets in Resources */,
 				9081DA03232C1497003679DF /* Main.storyboard in Resources */,
@@ -394,22 +461,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9081DA66232D5C27003679DF /* UIViewController+Extension.swift in Sources */,
+				9081DA5E232D5178003679DF /* AppStoryboard.swift in Sources */,
 				9081DA4B232D3C1C003679DF /* RequestProviderProtocol.swift in Sources */,
 				9081DA50232D4325003679DF /* URLComponents+RequestProtocol.swift in Sources */,
+				9081DA60232D531D003679DF /* NewsDetailViewController.swift in Sources */,
 				9081DA49232D3C02003679DF /* URLSessionProtocol.swift in Sources */,
 				9081DA52232D436A003679DF /* PagingModel.swift in Sources */,
 				9081DA4E232D42E4003679DF /* URLRequest+RequestProtocol.swift in Sources */,
 				9081DA35232CAADA003679DF /* Article.swift in Sources */,
 				9081DA44232D3BAD003679DF /* URLSessionProvider.swift in Sources */,
+				9081DA5C232D510D003679DF /* NewsMainCoordinator.swift in Sources */,
 				9081DA54232D4E71003679DF /* Constants.swift in Sources */,
+				9081DA59232D50A4003679DF /* Coordinator.swift in Sources */,
 				9081D9FC232C1497003679DF /* AppDelegate.swift in Sources */,
 				9081DA40232D3B68003679DF /* ResponseParser.swift in Sources */,
 				9081D9FE232C1497003679DF /* SceneDelegate.swift in Sources */,
 				9081DA47232D3BE4003679DF /* RequestProtocol.swift in Sources */,
+				9081DA62232D534F003679DF /* NewsDetailCoordinator.swift in Sources */,
+				9081DA6D232D5F88003679DF /* UIFont+Extension.swift in Sources */,
 				9081DA42232D3B91003679DF /* Reachability.swift in Sources */,
 				9081DA3E232D3B50003679DF /* Request.swift in Sources */,
 				9081DA38232CB00D003679DF /* ArticleListViewModel.swift in Sources */,
+				9081DA64232D543E003679DF /* UISceneDelegate+Extension.swift in Sources */,
 				9081DA3C232D3AF9003679DF /* APIError.swift in Sources */,
+				9081DA57232D5053003679DF /* NewsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,12 +660,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = NewsApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NewsApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cc.NewsApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harsha.NewsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -602,12 +678,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = NewsApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NewsApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cc.NewsApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harsha.NewsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
