@@ -13,7 +13,7 @@ extension SceneDelegate {
         window = UIWindow(windowScene: scene)
         let navigationController = UINavigationController()
         navigationController.navigationBar.tintColor = .black
-        mainCoordinator = NewsMainCoordinator(navigationController: navigationController)
+        mainCoordinator = ArticleMainCoordinator(navigationController: navigationController)
         mainCoordinator?.start()
         window?.rootViewController = mainCoordinator?.navigationController
         window?.makeKeyAndVisible()

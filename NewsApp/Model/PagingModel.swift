@@ -38,7 +38,7 @@ class PagingModel: ModelManager {
 extension PagingModel {
     
     func canDownload() -> Bool {
-        return (networkRequest == nil && isMoreItemsPendingToDownload == true)
+        return (networkRequest?.state == .completed && isMoreItemsPendingToDownload == true)
     }
     
     func processResponse(_ response : [AnyObject]?) {

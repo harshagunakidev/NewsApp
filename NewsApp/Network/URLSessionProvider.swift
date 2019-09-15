@@ -13,6 +13,8 @@ final class URLSessionProvider: RequestProviderProtocol {
     private var session: URLSessionProtocol
     static var timoutInterval = 60.0
     
+    var reachabilty = Reachability()
+    
     static var defaultSessionConfiguration : URLSessionConfiguration = {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = URLSessionProvider.timoutInterval
@@ -28,13 +30,18 @@ final class URLSessionProvider: RequestProviderProtocol {
         self.session = session
     }
     
-    func request<T: Codable>(type: T.Type, service: RequestProtocol, completion: @escaping ((NetworkReponse<T>) -> Void)) {
+    func request<T: Codable>(type: T.Type, service: RequestProtocol, completion: @escaping ((NetworkReponse<T>) -> Void)) -> URLSessionTask? {
         let request = URLRequest(service: service)
+        guard reachabilty.isNetworkAvailable() else {
+            completion(.failure(.init(type: .clientError(.noInternetConnection))))
+            return nil
+        }
         let task = session.dataTask(request: request) { [weak self] (data, response, error) in
             let httpResponse = response as? HTTPURLResponse
             self?.parseData(data: data, response: httpResponse, error: error, completion: completion)
         }
         task.resume()
+        return task
     }
     
     fileprivate func parseData<T: Codable>(data: Data?, response: HTTPURLResponse?,error: Error?, completion: (NetworkReponse<T>) -> Void) {
@@ -44,7 +51,6 @@ final class URLSessionProvider: RequestProviderProtocol {
         
         let statusCode = httpResponse.statusCode
         
-        
         switch statusCode {
         case 200..<300:
             let decoder = JSONDecoder()
@@ -52,7 +58,7 @@ final class URLSessionProvider: RequestProviderProtocol {
             let model = try? decoder.decode(APIResponse<T>.self, from: theData)
             
             guard let theModel = model, let status = theModel.status else  { return completion(.failure(.init(type: .clientError(.insufficientData)))) }
-            if let modelData = theModel.data, status == "ok" {
+            if let modelData = theModel.articles, status == "ok" {
                 completion(.success(modelData))
             } else {
                 completion(.failure(.init(type: .serverError(.unknownError))))

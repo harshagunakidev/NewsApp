@@ -13,7 +13,7 @@ struct APIResponse<T:Codable>: Codable  {
     var totalResults: Int?
     var code: Int?
     var message: String?
-    var data: T?
+    var articles: T?
 }
 
 enum APIResult<T> {

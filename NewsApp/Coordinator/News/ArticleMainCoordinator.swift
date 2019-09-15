@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsMainCoordinator: Coordinator {
+class ArticleMainCoordinator: Coordinator {
     
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
@@ -18,15 +18,22 @@ class NewsMainCoordinator: Coordinator {
     }
     
     func start() {
-        let controller = NewsListViewController.instantiateFromAppStoryBoard(appStoryBoard: .Main)
+        let controller = ArticleListViewController.instantiateFromAppStoryBoard(appStoryBoard: .Main)
+        controller.didClickArticle = {
+            [weak self](article) in
+            guard let theArticle = article else { return }
+            self?.showNewsDetail(theArticle)
+        }
         navigationController.pushViewController(controller, animated: true)
     }
 }
 
-extension NewsMainCoordinator {
+extension ArticleMainCoordinator {
     
-    func showNewsDetail() {
-        let child = NewsDetailCoordinator(navigationController: navigationController)
+    func showNewsDetail(_ article: Article) {
+        let child = ArticleDetailCoordinator(navigationController: navigationController)
+        navigationController.setToolbarHidden(true, animated: false)
+        child.viewModel = ArticleDetailViewModel.init(article: article)
         childCoordinators.append(child)
         child.start()
     }

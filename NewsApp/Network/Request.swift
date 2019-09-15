@@ -27,6 +27,7 @@ enum Request: RequestProtocol {
             parameters["page"] = page
             parameters["pageSize"] = pageSize
             parameters["apiKey"] = NewsApi.key
+            parameters["country"] = "in"
             return .requestParameters(parameters)
         }
     }

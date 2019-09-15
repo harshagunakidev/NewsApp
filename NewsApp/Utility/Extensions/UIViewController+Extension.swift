@@ -35,4 +35,37 @@ extension UIViewController {
         navigationController?.navigationBar.topItem?.title = ""
         navigationController?.navigationBar.barTintColor = .black
     }
+    
+    func showActivityIndicator() {
+        DispatchQueue.main.async {
+            if let activityView = self.view.viewWithTag(1000) as? UIActivityIndicatorView { activityView.startAnimating(); return }
+            let activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+            activityView.tag = 1000
+            activityView.center = self.view.center
+            activityView.hidesWhenStopped = true
+            activityView.color = .white
+            activityView.startAnimating()
+            self.view.addSubview(activityView)
+            activityView.bringSubviewToFront(activityView)
+        }
+    }
+    
+    func hideActivityIndicator() {
+        DispatchQueue.main.async {
+            if let activityView = self.view.viewWithTag(1000) as? UIActivityIndicatorView {
+                   activityView.stopAnimating()
+               }
+        }
+    }
+    
+    func showAlert(title: String = "Error" , message: String , style: UIAlertController.Style = .alert, actions: [UIAlertAction] = []) {
+        let alertViewController = UIAlertController(title: title, message: message , preferredStyle: style)
+        let oK = UIAlertAction(title: "OK", style: .default)
+        alertViewController.addAction(oK)
+        DispatchQueue.main.async {
+            if !self.isBeingPresented {
+                self.present(alertViewController, animated: true, completion: nil)
+            }
+        }
+    }
 }

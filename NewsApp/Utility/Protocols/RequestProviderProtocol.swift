@@ -9,7 +9,7 @@
 import Foundation
 
 protocol RequestProviderProtocol {
-    func request<T: Codable>(type: T.Type, service: RequestProtocol, completion: @escaping ((NetworkReponse<T>) -> Void))
+    func request<T: Codable>(type: T.Type, service: RequestProtocol, completion: @escaping ((NetworkReponse<T>) -> Void)) -> URLSessionTask?
 }
 
 public enum NetworkReponse<T> {
