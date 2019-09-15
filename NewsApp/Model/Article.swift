@@ -33,7 +33,6 @@ class Article: NSObject, Codable {
         do {
             articlesModels = try CoreDataManager.sharedInstance.moc?.fetch(fetchRequest) as? [ArticleModel]
             
-            
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
