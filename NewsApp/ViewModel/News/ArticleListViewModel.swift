@@ -16,6 +16,7 @@ class ArticleListViewModel: PagingModel {
     
     init( dataProvider: TableViewDataProvider<Article>) {
         self.dataProvider = dataProvider
+        self.dataProvider.models = Article.fetchArticlesFromDB()
     }
 }
 
@@ -26,7 +27,7 @@ extension ArticleListViewModel {
             guard let weakSelf = self else { return }
             switch result {
             case .failure(let error): weakSelf.reload?(error)
-            case .success(let data): weakSelf.processResponse(data); weakSelf.dataProvider.models = weakSelf.objectsArray as! [Article]; weakSelf.reload?(nil)
+            case .success(let data): weakSelf.processResponse(data); weakSelf.dataProvider.models = weakSelf.objectsArray as! [Article]; weakSelf.storeArticle(weakSelf.dataProvider.models) ; weakSelf.reload?(nil)
             }
         }
     }
@@ -45,6 +46,13 @@ extension ArticleListViewModel {
     func resetData() {
         resetToinitialConfig()
         dataProvider.models = []
+    }
+    
+    func storeArticle(_ articles:[Article]) {
+        DispatchQueue.main.async {
+            CoreDataManager.sharedInstance.clearDatabase()
+           _ = articles.map{ ArticleModel.save(article: $0) }
+        }
     }
 }
 

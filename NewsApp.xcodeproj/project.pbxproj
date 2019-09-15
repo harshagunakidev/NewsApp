@@ -52,6 +52,10 @@
 		9081DA7F232E40BF003679DF /* TableViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA7E232E40BF003679DF /* TableViewDataProvider.swift */; };
 		9081DA81232E49F7003679DF /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA80232E49F7003679DF /* ArticleDetailViewModel.swift */; };
 		9081DA83232E53AA003679DF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DA82232E53AA003679DF /* UIView+Extension.swift */; };
+		9081DAC4232E6816003679DF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DAC3232E6816003679DF /* CoreDataManager.swift */; };
+		9081DAC7232E7423003679DF /* NewsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9081DAC5232E7423003679DF /* NewsApp.xcdatamodeld */; };
+		9081DACA232E7695003679DF /* ArticleModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DAC8232E7695003679DF /* ArticleModel+CoreDataClass.swift */; };
+		9081DACB232E7695003679DF /* ArticleModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081DAC9232E7695003679DF /* ArticleModel+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +131,10 @@
 		9081DA7E232E40BF003679DF /* TableViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataProvider.swift; sourceTree = "<group>"; };
 		9081DA80232E49F7003679DF /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
 		9081DA82232E53AA003679DF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		9081DAC3232E6816003679DF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		9081DAC6232E7423003679DF /* NewsAppCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsAppCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		9081DAC8232E7695003679DF /* ArticleModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ArticleModel+CoreDataClass.swift"; path = "/Users/keerthini/Desktop/NewsApp/NewsApp/NewsApp/Model/ArticleModel+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		9081DAC9232E7695003679DF /* ArticleModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ArticleModel+CoreDataProperties.swift"; path = "/Users/keerthini/Desktop/NewsApp/NewsApp/NewsApp/Model/ArticleModel+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		FA7210822B904A813C85CCEC /* Pods-NewsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsAppTests/Pods-NewsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD836BDB937E5AFBC6EF3755 /* Pods-NewsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsAppUITests/Pods-NewsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +245,8 @@
 		9081DA2C232CA6B4003679DF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9081DAC8232E7695003679DF /* ArticleModel+CoreDataClass.swift */,
+				9081DAC9232E7695003679DF /* ArticleModel+CoreDataProperties.swift */,
 				9081DA34232CAAD9003679DF /* Article.swift */,
 				9081DA51232D436A003679DF /* PagingModel.swift */,
 			);
@@ -259,6 +269,7 @@
 				9081DA45232D3BC5003679DF /* Protocols */,
 				9081DA53232D4E71003679DF /* Constants.swift */,
 				9081DA5D232D5178003679DF /* AppStoryboard.swift */,
+				9081DAC3232E6816003679DF /* CoreDataManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -352,6 +363,7 @@
 			children = (
 				9081DA67232D5DF6003679DF /* UIFont */,
 				9081DA04232C149D003679DF /* Assets.xcassets */,
+				9081DAC5232E7423003679DF /* NewsApp.xcdatamodeld */,
 				9081DA09232C149D003679DF /* Info.plist */,
 			);
 			path = Resources;
@@ -640,6 +652,8 @@
 				9081DA66232D5C27003679DF /* UIViewController+Extension.swift in Sources */,
 				9081DA5E232D5178003679DF /* AppStoryboard.swift in Sources */,
 				9081DA4B232D3C1C003679DF /* RequestProviderProtocol.swift in Sources */,
+				9081DACA232E7695003679DF /* ArticleModel+CoreDataClass.swift in Sources */,
+				9081DAC4232E6816003679DF /* CoreDataManager.swift in Sources */,
 				9081DA50232D4325003679DF /* URLComponents+RequestProtocol.swift in Sources */,
 				9081DA60232D531D003679DF /* ArticleDetailViewController.swift in Sources */,
 				9081DA7C232E3A58003679DF /* String+Extension.swift in Sources */,
@@ -649,9 +663,11 @@
 				9081DA35232CAADA003679DF /* Article.swift in Sources */,
 				9081DA44232D3BAD003679DF /* URLSessionProvider.swift in Sources */,
 				9081DA5C232D510D003679DF /* ArticleMainCoordinator.swift in Sources */,
+				9081DACB232E7695003679DF /* ArticleModel+CoreDataProperties.swift in Sources */,
 				9081DA54232D4E71003679DF /* Constants.swift in Sources */,
 				9081DA59232D50A4003679DF /* Coordinator.swift in Sources */,
 				9081DA78232E0DDF003679DF /* ArticleRepresentable.swift in Sources */,
+				9081DAC7232E7423003679DF /* NewsApp.xcdatamodeld in Sources */,
 				9081D9FC232C1497003679DF /* AppDelegate.swift in Sources */,
 				9081DA74232DF1B9003679DF /* ArticleTableViewCell.swift in Sources */,
 				9081DA40232D3B68003679DF /* ResponseParser.swift in Sources */,
@@ -999,6 +1015,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9081DAC5232E7423003679DF /* NewsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9081DAC6232E7423003679DF /* NewsAppCoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 9081DAC6232E7423003679DF /* NewsAppCoreDataModel.xcdatamodel */;
+			path = NewsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9081D9F0232C1497003679DF /* Project object */;
 }
