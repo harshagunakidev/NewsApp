@@ -1,9 +1,13 @@
 # NewsApp
 
+- It's application which shows the list of Headlines from server so user can read it.
 
 # Whats Done:
 
-- It's application which shows the list of Headlines from server so user can read it.
+  ## Tools
+  - Xcode 11
+  - Swift version : 5.0
+  - Target : iOS 13
 
  ## News List screen 
    - Shows top list headlines from Server.
